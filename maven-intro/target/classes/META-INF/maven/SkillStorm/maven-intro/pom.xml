@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SkillStorm</groupId>
+	<artifactId>maven-intro</artifactId>
+	<version>1.8.301</version>
+
+	<!-- 
+		Project Coordinates 
+			- groupId: organization 
+			- artifactId: project name 
+			- version: version number of project (major.minor.incremental) 
+			
+		Maven 
+			- manages project dependencies 
+			- provides build automation 
+			
+		POM 
+			- Project Object Model 
+			- Maven configuration file 
+			- contains ALL the info Maven needs to build your project 
+		
+		Dependency Management 
+			- order to where Maven looks for your project dependencies 
+				1. local repository (default location: /.m2/repository) 
+				2. private remote repository (something you'd setup, like Nexus or Artifactory) 
+				3. public remote repository (Maven Central) 
+				
+		Maven Build Lifecycle 
+			- lifecycle stages: 
+				- validate project 
+				- compile code 
+				- package into the jar/war 
+				- install or save to your machine 
+				- deploy to a server 
+			- Maven build goals 
+				- maven build 
+				- maven package 
+				- maven install 
+				etc. 
+		-->
+
+
+	<!-- 
+		From Java 1.5 => 1.8 
+			- set the project properties 
+				OR 
+			- configure the compiler plugin 
+	-->
+	<!-- Setting the project properties -->
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<!--  Configuring the plugin 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	-->
+	
+	<!-- All the dependencies for your Maven Project -->
+	<dependencies>
+	
+		<!-- JUnit 4 Dependency -->
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.12</version>
+    		<scope>test</scope>
+		</dependency>
+		
+
+	</dependencies>
+
+
+
+</project>
