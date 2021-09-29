@@ -3,6 +3,27 @@
 	multi-line comment
 */ 
 
+/*
+	DML: Data Manipulation Language
+		insert, update, delete, select
+        performed on the data inside the table
+        
+	DDL: Data Definition Language
+		create, alter, drop, truncate
+		perfomed on the table itself
+
+		ALTER table_name etc.
+			-- modifies the structure of the table
+
+		TRUNCATE `customers-example`.`customers`;
+			-- deletes all data, but keeps table
+		
+        DROP TABLE `customers-example`.`customers`;
+			-- deletes all data, and removes table
+		
+*/
+
+
 -- create a 'customers' table in the 'customers-example' schema
 CREATE TABLE `customers-example`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
